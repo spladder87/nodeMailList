@@ -9,7 +9,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var submitUsersRouter = require('./routes/submitUsers');
+//var newUsersRouter = require('./routes/users/newuser');
+
 
 var app = express();
 
@@ -21,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/submitUsers', submitUsersRouter);
+//app.use('/users/newuser', newUsersRouter);
 
 
 module.exports = app;
